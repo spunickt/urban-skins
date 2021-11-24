@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  font-family: 'Bebas Neue', cursive;  
+  background-color: #B9CFD4;
+  color: #ffffff;
+
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+header > h1, h2 {
+  background: rgba(177, 177, 177, 0.8);
+  padding: 5px ;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  background-image: url(/assets/images/img1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.image_2 {
+  background-image: url(/assets/images/img2.jpg);
+}
+
+.image_3 {
+  background-image: url(/assets/images/img3.jpg);
+}
+
+.image_4 {
+  background-image: url(/assets/images/img4.jpg);
+}
+
+.image_5 {
+  background-image: url(/assets/images/img5.jpg);
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+footer a {
+  font-size: 1.7rem;
+  margin-right: 5px;
+}
+
+a:hover {
+  color: #dddddd;
+}
+
+/* modal content styles */
+.modal-content-wrapper {
+  max-width: 1400px;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 70px 0;
+}
+.modal-content-wrapper .image-modal-content {
+  flex: 0 0 30%;
+  cursor: pointer;
+  transition: 400ms ease-out;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .modal-content-wrapper .image-modal-content {
+    flex: 0 0 45%;
+  }
+}
+@media (max-width: 550px) {
+  .modal-content-wrapper .image-modal-content {
+    flex: 0 0 100%;
+      }
+}
+
+.modal-content-wrapper .image-modal-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* modal popup styles */
+.image-modal-popup {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(218, 218, 218, 0.8);
+  animation: 1000ms fadeIn;
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-modal-popup .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.image-modal-popup img {
+  width: 90%;
+  max-height: calc(100vh - 150px);
+  cursor: pointer;
+}
+
+.image-modal-popup span {
+  position: absolute;
+  bottom: -60px;
+  right: 10px;
+  font-size: 2rem;
+  color: #2F4858;
+  cursor: pointer;
+}
+
+.back-link {
+  margin-left: 20px;
+}
+
+.back-arrow {
+  font-size: 2rem;
+}
